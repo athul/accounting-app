@@ -8,13 +8,14 @@
  "field_order": [
   "posting_date",
   "description",
+  "accounts",
   "total_debit",
   "total_credit",
-  "difference",
   "amended_from"
  ],
  "fields": [
   {
+   "default": "now",
    "fieldname": "posting_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -23,23 +24,19 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Long Text",
+   "fieldtype": "Text",
    "label": "Description"
   },
   {
    "fieldname": "total_debit",
    "fieldtype": "Currency",
-   "label": "Total Debit"
+   "label": "Total Debit",
+   "read_only": 1
   },
   {
    "fieldname": "total_credit",
    "fieldtype": "Currency",
-   "label": "Total Credit"
-  },
-  {
-   "fieldname": "difference",
-   "fieldtype": "Currency",
-   "label": "Difference",
+   "label": "Total Credit",
    "read_only": 1
   },
   {
@@ -52,19 +49,16 @@
    "read_only": 1
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Journal Entry",
-   "print_hide": 1,
-   "read_only": 1
+   "fieldname": "accounts",
+   "fieldtype": "Table",
+   "label": "Accounts",
+   "options": "Journal Entry Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-04-22 09:58:05.254856",
+ "modified": "2021-04-23 01:02:45.476386",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "Journal Entry",

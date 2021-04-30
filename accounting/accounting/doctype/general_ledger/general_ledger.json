@@ -7,11 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "account",
-  "party",
-  "party_type",
   "debit_amount",
   "credit_amount",
-  "account_balance",
   "transaction_type",
   "transaction_number",
   "posting_date"
@@ -24,30 +21,16 @@
    "options": "Account"
   },
   {
-   "fieldname": "party",
-   "fieldtype": "Data",
-   "label": "Party"
-  },
-  {
-   "fieldname": "party_type",
-   "fieldtype": "Select",
-   "label": "Party Type",
-   "options": "Customer\nSupplier"
-  },
-  {
+   "default": "0",
    "fieldname": "debit_amount",
    "fieldtype": "Currency",
    "label": "Debit Amount"
   },
   {
+   "default": "0",
    "fieldname": "credit_amount",
    "fieldtype": "Currency",
    "label": "Credit Amount"
-  },
-  {
-   "fieldname": "account_balance",
-   "fieldtype": "Currency",
-   "label": "Account Balance"
   },
   {
    "fieldname": "transaction_type",
@@ -62,6 +45,7 @@
    "options": "transaction_type"
   },
   {
+   "default": "now",
    "fieldname": "posting_date",
    "fieldtype": "Date",
    "label": "Posting Date"
@@ -69,7 +53,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-04-21 11:53:16.577299",
+ "modified": "2021-04-23 01:01:58.227138",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "General Ledger",

@@ -1,13 +1,13 @@
 {
  "actions": [],
- "autoname": "format:{account_name}-{account_number}{#####}",
- "creation": "2021-04-20 11:46:04.354065",
+ "autoname": "field:account_name",
+ "creation": "2021-04-26 10:27:13.612377",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "account_number",
   "account_name",
+  "account_number",
   "root_type",
   "balance",
   "lft",
@@ -20,11 +20,13 @@
   {
    "fieldname": "account_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Account Number",
    "reqd": 1,
    "unique": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "account_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -35,8 +37,10 @@
   {
    "fieldname": "root_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Root Type",
-   "options": "Asset\nLiability\nIncome\nExpense\nEquity"
+   "options": "Asset\nLiability\nIncome\nExpense\nEquity",
+   "reqd": 1
   },
   {
    "fieldname": "balance",
@@ -81,7 +85,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2021-04-20 11:46:04.354065",
+ "modified": "2021-04-29 10:25:05.894532",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "Account",

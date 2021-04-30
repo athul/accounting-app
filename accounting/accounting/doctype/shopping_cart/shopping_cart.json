@@ -1,8 +1,7 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
  "autoname": "field:item_name",
- "creation": "2021-04-16 12:49:48.563756",
+ "creation": "2021-04-29 19:56:37.681152",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -10,25 +9,20 @@
   "item_name",
   "price",
   "image",
-  "brand",
-  "description",
-  "route"
+  "route",
+  "quantity"
  ],
  "fields": [
   {
    "fieldname": "item_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Item Name",
-   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "price",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Price",
-   "reqd": 1
+   "label": "Price"
   },
   {
    "fieldname": "image",
@@ -36,32 +30,23 @@
    "label": "Image"
   },
   {
-   "fieldname": "brand",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Brand"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Long Text",
-   "in_list_view": 1,
-   "label": "Description"
-  },
-  {
    "fieldname": "route",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Route",
-   "read_only": 1
+   "label": "Route"
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
   }
  ],
- "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-04-29 15:03:02.095366",
+ "modified": "2021-04-29 20:40:55.422494",
  "modified_by": "Administrator",
  "module": "Accounting",
- "name": "Item",
+ "name": "Shopping Cart",
  "owner": "Administrator",
  "permissions": [
   {
@@ -77,8 +62,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
- "route": "item",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

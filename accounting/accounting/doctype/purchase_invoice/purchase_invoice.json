@@ -1,14 +1,15 @@
 {
  "actions": [],
+ "autoname": "PRCH_INV.#####",
  "creation": "2021-04-22 13:05:44.183581",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "title",
+  "posting_date",
   "description",
   "items",
-  "status",
   "total_amount",
   "amended_from"
  ],
@@ -32,17 +33,6 @@
    "options": "Purchase Invoice Item"
   },
   {
-   "allow_on_submit": 1,
-   "default": "Draft",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Draft\nPaid\nUnpaid\nCancelled",
-   "print_hide": 1
-  },
-  {
    "fieldname": "total_amount",
    "fieldtype": "Currency",
    "label": "Total Amount",
@@ -56,12 +46,18 @@
    "options": "Purchase Invoice",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-04-22 13:05:44.183581",
+ "modified": "2021-04-29 10:15:09.844774",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "Purchase Invoice",

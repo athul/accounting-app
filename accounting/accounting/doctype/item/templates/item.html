@@ -1,7 +1,29 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title }}</h1>
+<div class="py-20 row">
+    <div class="col-sm-2">
+        <img src="{{ image }}" alt="{{ title }}">
+    </div>
+    <div class="col">
+        <h1>{{ title }}</h1>
+        <p class="lead">Rs. {{ price }}</p>
+        Quantity:<input id="quantitySelector" type="number" value="1" min="1">
+        <p> {{ description }} </p>
+        <!-- <form action="www.google.com"> -->
+        <button type="button" id="addToCart" class="btn btn-primary">Add to Cart</button> 
+        <!-- </form> -->
+        <!-- <a href="" id="addToCart">Add to Cart</a> -->
+        
+    </div>
+    <a href="/cart">View Cart</a>
+</div>
 {% endblock %}
-
 <!-- this is a sample default web page template -->
+
+{% block script %}
+<!-- js should be loaded in body! -->>
+<script>
+    {% include "accounting/accounting/doctype/item/templates/item.js" %}
+</script>
+{% endblock %}

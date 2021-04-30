@@ -1,0 +1,27 @@
+<h1>Cart</h1>
+
+{% for item in cart_items %}
+    <div class="py-8 row">
+        <div class="col-sm-1">
+            <img src="{{ item.image }}" alt="{{ item.item_name }}">
+        </div>
+        <div class="col">
+            <a class="font-size-lg" href="{{ item.route }}">{{ item.item_name }}</a>
+            <p class="text-muted">Rs {{ item.price }}</p>
+            <p class="text-muted">No of Items: {{ item.quantity }}</p>
+        </div>
+        <div class="col">
+            <button type="button" onClick="deleteFromCart('{{item.item_name}}')" class="btn btn-danger float-right">Delete</button> 
+        </div>
+    </div> 
+{% endfor %}
+
+{% if cart_items %}
+    <div class="font-weight-bold">Total: Rs {{ sum[0]['sum'] }}</div>
+{% else %}
+    <p>Cart is empty.</p>
+{% endif %}
+
+<div class="text-right">
+    <a href="http://accounting:8000/home">Continue Shopping</a>
+</div>

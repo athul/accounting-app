@@ -6,9 +6,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "posting_date",
   "title",
   "items",
-  "status",
   "paid",
   "total",
   "amended_from"
@@ -22,17 +22,6 @@
    "reqd": 1
   },
   {
-   "allow_on_submit": 1,
-   "default": "Draft",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Status",
-   "options": "Draft\nPaid\nUnpaid\nCancelled",
-   "print_hide": 1
-  },
-  {
-   "allow_on_submit": 1,
    "default": "0",
    "fieldname": "paid",
    "fieldtype": "Check",
@@ -43,7 +32,8 @@
    "default": "0",
    "fieldname": "total",
    "fieldtype": "Currency",
-   "label": "Total"
+   "label": "Total",
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -59,12 +49,18 @@
    "fieldtype": "Table",
    "label": "Items",
    "options": "Purchase Invoice Item"
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-04-22 10:45:40.030533",
+ "modified": "2021-04-29 10:44:01.498592",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "Sales Invoice",

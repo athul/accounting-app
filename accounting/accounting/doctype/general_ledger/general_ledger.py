@@ -3,9 +3,8 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-from frappe.utils import today()
+from frappe.utils import today
 from frappe.model.document import Document
 
 class GeneralLedger(Document):
-	def validate(self):
-		self.posting_date = today()
+	pass

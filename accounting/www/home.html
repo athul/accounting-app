@@ -1,0 +1,15 @@
+<h1>Gada Electronics</h1>
+<div class="text-right">
+    <a href="/cart">Cart</a>
+</div>
+{% for item in items %}
+    <div class="py-8 row">
+        <div class="col-sm-1">
+            <img src="{{ item.image }}" alt="{{ item.item_name }}">
+        </div>
+        <div class="col">
+            <a class="font-size-lg" href="{{ item.route }}">{{ item.item_name }}</a>
+            <p class="text-muted">Rs {{ item.price }}</p>
+        </div>
+    </div>
+{% endfor %}
