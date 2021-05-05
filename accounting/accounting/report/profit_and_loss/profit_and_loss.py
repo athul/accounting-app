@@ -76,7 +76,7 @@ def getData(filters=None) -> List:
         report_entry = {
             "indent": 1,
             "account": expns.account,
-            "balance": -(expns.balance),
+            "balance": expns.balance,
             "parent_account": parent_expenses['account']
         }
         data.append(report_entry)
