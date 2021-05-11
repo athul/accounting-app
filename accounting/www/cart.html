@@ -16,8 +16,18 @@
     </div> 
 {% endfor %}
 
+
 {% if cart_items %}
+{%if frappe.session.user == "Guest"%}
+    <hr/>
+    <div class="form-group border-1">
+    <label for="customerName">Customer Name</label>
+    <input type="text" class="form-control" id="customerName" placeholder="Enter Customer Name">
+  </div>
+{%endif%}
+<hr/>
     <div class="font-weight-bold">Total: Rs {{ sum[0]['sum'] }}</div>
+    <button type="button" onClick="generateSalesInvoice()" class="btn btn-success">Generate Sales Invoice</button>
 {% else %}
     <p>Cart is empty.</p>
 {% endif %}

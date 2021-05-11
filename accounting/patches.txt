@@ -1,0 +1,1 @@
+accounting.accounting.doctype.sales_invoice.patches.set_total_quantity

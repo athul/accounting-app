@@ -6,17 +6,19 @@ from __future__ import unicode_literals
 import frappe
 from frappe.website.website_generator import WebsiteGenerator
 
+
 class Item(WebsiteGenerator):
-	pass
+    pass
+
 
 @frappe.whitelist(allow_guest=True)
-def addToCart(name,image,price,route,quantity):
-	cart_item = frappe.get_doc({
-		"doctype":"Shopping Cart",
-		"item_name":name,
-		"price":price,
-		"image":image,
-		"route":route,
-		"quantity":quantity
-	})
-	cart_item.insert()
+def add_to_cart(name, image, price, route, quantity):
+    cart_item = frappe.get_doc({
+        "doctype": "Shopping Cart",
+        "item_name": name,
+        "price": price,
+        "image": image,
+        "route": route,
+        "quantity": quantity
+    })
+    cart_item.insert()

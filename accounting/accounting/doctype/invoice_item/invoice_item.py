@@ -6,6 +6,6 @@ from __future__ import unicode_literals
 # import frappe
 from frappe.model.document import Document
 
-class PurchaseInvoiceItem(Document):
+class InvoiceItem(Document):
 	def before_save(self):
 		self.total = self.rate * self.quantity

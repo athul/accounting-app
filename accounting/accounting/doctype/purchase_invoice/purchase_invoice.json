@@ -10,7 +10,7 @@
   "posting_date",
   "description",
   "items",
-  "total_amount",
+  "total",
   "amended_from"
  ],
  "fields": [
@@ -30,13 +30,7 @@
    "fieldname": "items",
    "fieldtype": "Table",
    "label": "Items",
-   "options": "Purchase Invoice Item"
-  },
-  {
-   "fieldname": "total_amount",
-   "fieldtype": "Currency",
-   "label": "Total Amount",
-   "read_only": 1
+   "options": "Invoice Item"
   },
   {
    "fieldname": "amended_from",
@@ -52,12 +46,18 @@
    "fieldname": "posting_date",
    "fieldtype": "Date",
    "label": "Posting Date"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-04-29 10:15:09.844774",
+ "modified": "2021-05-10 11:46:50.951128",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "Purchase Invoice",

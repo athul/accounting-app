@@ -18,9 +18,16 @@ class TestSalesInvoice(unittest.TestCase):
             "title": "OP Phones",
             "posting_date": "2020-05-10",
             "items": [{
-                "items": "OnePlus Nord",
+                "item": "OnePlus Nord",
                 "quantity": 2,
-            }]
+                "rate":29000
+            },
+            {
+                "item": "Silicon",
+                "quantity": 2,
+                "rate":200
+            }],
+            "party":"Jim"
         })
         doc.insert()
         doc.submit()

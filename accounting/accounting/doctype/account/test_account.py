@@ -10,7 +10,7 @@ import unittest
 class TestAccount(unittest.TestCase):
     def test_account_create(self):
         if not frappe.db.exists("Account", "_Test Base Account"):
-            createAccount("_Test Base Account", "112358", "Expenses", "Expense")
+            create_account("_Test Base Account", "112358", "Expenses", "Expense")
 
         acc_num, acc_name = frappe.db.get_value("Account", "_Test Base Account", [
                 "account_number", "account_name"])
@@ -19,7 +19,7 @@ class TestAccount(unittest.TestCase):
         deleteAccount("_Test Base Account")
 
 
-def createAccount(acc_name: str, acc_num: str, parent_acc: str, type: str):
+def create_account(acc_name: str, acc_num: str, parent_acc: str, type: str):
     if not frappe.db.exists("Accounts", acc_name):
         doc = frappe.get_doc({
             "doctype": "Account",

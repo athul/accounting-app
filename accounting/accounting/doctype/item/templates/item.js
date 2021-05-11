@@ -2,7 +2,7 @@ frappe.ready(function(){
     $('#addToCart').on('click', function(){
 
         frappe.call({
-            method: "accounting.accounting.doctype.item.item.addToCart",
+            method: "accounting.accounting.doctype.item.item.add_to_cart",
             args: {
                 "name": '{{ doc.name }}',
                 "image": '{{ doc.image }}',
